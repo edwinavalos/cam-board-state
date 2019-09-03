@@ -1,0 +1,34 @@
+<!--
+Modified WebRTC demo from:
+https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API/Taking_still_photos
+-->
+
+<!doctype html>
+<html>
+<head>
+    <title>Webcam board state</title>
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}"" type="text/css" media="all">
+    <script src="{{ url_for('static',filename='js/capture.js') }}">
+    </script>
+</head>
+<body>
+<div class="contentarea">
+    <h1>
+        Take a photo of QR codes to generate board state
+    </h1>
+    <p>
+        Takes a photo from your webcam every five seconds and sends it to the server for rendering
+    </p>
+    <div class="camera">
+        <video id="video">Video stream not available.</video>
+    </div>
+    <canvas id="canvas">
+    </canvas>
+    <div class="output">
+        <img id="photo" alt="The screen capture will appear in this box.">
+    </div>
+    <div id="imageContainer"></div>
+</div>
+</body>
+</html>
